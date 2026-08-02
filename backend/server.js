@@ -13,6 +13,7 @@ connectDB()
 
 // middlewares 
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 
 //api endpoints
@@ -25,5 +26,4 @@ app.get('/',(req,res)=>{
 
 app.listen(port, ()=>{
     console.log("Server started on PORT: "+ port);
-    
 })
